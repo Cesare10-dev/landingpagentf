@@ -10,10 +10,10 @@ const ProductShowcase = () => {
           <div className="flex justify-center">
             <div className="tag">Boost your productivity</div>
           </div>
-          <h2 className="text-center text-4xl md:text-[54px] md:leading-[60px] h-28 md:h-32 mt-5 font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text">
+          <h2 className="section-title h-28 mt-5">
             A more effective way to track progress
           </h2>
-          <p className="text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E] mt-5">
+          <p className="section-description mt-5">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis
             eum quis vero temporibus ducimus eius?
           </p>
