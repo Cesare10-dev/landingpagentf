@@ -5,10 +5,10 @@ import Image from "next/image";
 
 export const Hero = () => {
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_66%)]">
+    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_68%)] overflow-x-clip">
       <div className="container mx-auto px-8">
         <div className="md:flex items-center">
-          <div className="w-[478px]">
+          <div className="w-[578px]">
             <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
               Version 2.0 is here
             </div>
@@ -33,9 +33,15 @@ export const Hero = () => {
             <Image
               src={cog}
               alt="cog img"
-              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6"
+              className="md:absolute md:h-full md:w-auto md:max-w-none"
             />
-            <Image src={cyl} alt="cyl" />
+            <Image
+              src={cyl}
+              alt="cyl"
+              width={220}
+              height={220}
+              className="hidden md:block md:absolute -top-8 -left-32"
+            />
           </div>
         </div>
       </div>
