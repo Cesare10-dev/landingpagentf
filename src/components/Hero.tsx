@@ -42,6 +42,13 @@ export const Hero = () => {
               height={220}
               className="hidden md:block md:absolute -top-8 -left-32"
             />
+            <Image
+              src={cyl}
+              alt="cyl"
+              width={220}
+              height={220}
+              className="hidden lg:block absolute top-[524px] left-[448px] rotate-[70deg]"
+            />
           </div>
         </div>
       </div>
