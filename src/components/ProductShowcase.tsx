@@ -6,11 +6,11 @@ const ProductShowcase = () => {
   return (
     <section className="bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip">
       <div className="container mx-auto">
-        <div className="max-w-[540px] mx-auto">
+        <div className="section-heading">
           <div className="flex justify-center">
             <div className="tag">Boost your productivity</div>
           </div>
-          <h2 className="section-title h-28 mt-5">
+          <h2 className="section-title h-32 mt-5">
             A more effective way to track progress
           </h2>
           <p className="section-description mt-5">
