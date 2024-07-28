@@ -1,7 +1,9 @@
+"use client";
 import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import cog from "@/assets/3dcog.png";
 import cyl from "@/assets/3dcyl.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
   return (
@@ -28,10 +30,19 @@ export const Hero = () => {
           </div>
 
           <div className="mt-20 md:mt-0 md:h-[648px] md:flex-1 relative">
-            <Image
-              src={cog}
+            <motion.img
+              src={cog.src}
               alt="cog img"
-              className="md:absolute md:h-full md:w-auto md:max-w-none"
+              className="md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0"
+              animate={{
+                translateY: [-30, 30],
+              }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "mirror",
+                duration: 3,
+                ease: "easeInOut",
+              }}
             />
             <Image
               src={cyl}
