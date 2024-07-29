@@ -3,9 +3,26 @@ import { ArrowLongRightIcon } from "@heroicons/react/24/solid";
 import cog from "@/assets/3dcog.png";
 import cyl from "@/assets/3dcyl.png";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useTransform,
+} from "framer-motion";
+import { useRef } from "react";
 
 export const Hero = () => {
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start end", "end start"],
+  });
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
+  useMotionValueEvent(scrollYProgress, "change", (latestValue) =>
+    console.log(latestValue)
+  );
+
   return (
     <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_68%)] overflow-x-clip">
       <div className="container mx-auto px-8">
@@ -44,19 +61,26 @@ export const Hero = () => {
                 ease: "easeInOut",
               }}
             />
-            <Image
-              src={cyl}
+            <motion.img
+              src={cyl.src}
               alt="cyl"
               width={220}
               height={220}
               className="hidden md:block md:absolute -top-8 -left-32"
+              style={{
+                translateY: translateY,
+              }}
             />
-            <Image
-              src={cyl}
+            <motion.img
+              src={cyl.src}
               alt="cyl"
               width={220}
               height={220}
-              className="hidden lg:block absolute top-[524px] left-[448px] rotate-[70deg]"
+              className="hidden lg:block absolute top-[450px] left-[448px] rotate-[70deg]"
+              style={{
+                rotate: 70,
+                translateY: translateY,
+              }}
             />
           </div>
         </div>

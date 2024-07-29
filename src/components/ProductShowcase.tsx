@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import dd from "@/assets/dd.jpg";
 import cyl from "@/assets/3dcyl.png";
+import { motion } from "framer-motion";
 
 const ProductShowcase = () => {
   return (
@@ -25,15 +27,15 @@ const ProductShowcase = () => {
             width={1050}
             className="mt-10 mx-auto"
           />
-          <Image
-            src={cyl}
+          <motion.img
+            src={cyl.src}
             alt="c"
             width={262}
             height={262}
             className="hidden md:block absolute -right-28 -top-24"
           />
-          <Image
-            src={cyl}
+          <motion.img
+            src={cyl.src}
             alt="c"
             height={248}
             className="hidden md:block absolute bottom-20 -left-36"
