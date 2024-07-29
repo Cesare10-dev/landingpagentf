@@ -24,7 +24,10 @@ export const Hero = () => {
   );
 
   return (
-    <section className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_68%)] overflow-x-clip">
+    <section
+      ref={heroRef}
+      className="pt-8 pb-20 md:pt-5 md:pb-10 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_68%)] overflow-x-clip"
+    >
       <div className="container mx-auto px-8">
         <div className="md:flex items-center">
           <div className="w-[578px]">
@@ -76,7 +79,7 @@ export const Hero = () => {
               alt="cyl"
               width={220}
               height={220}
-              className="hidden lg:block absolute top-[450px] left-[448px] rotate-[70deg]"
+              className="hidden lg:block absolute top-[550px] left-[448px] rotate-[70deg]"
               style={{
                 rotate: 70,
                 translateY: translateY,
